@@ -4,8 +4,8 @@ import random
 from pathlib import Path
 
 # 데이터셋 경로 설정
-source_dir = r"C:\sg0117\dataset\without_augmentation"   # 원본 데이터 있는 경로
-destination_dir = r"C:\sg0117\dataset\data"              # train / test 분류될 폴더 경로
+source_dir = r"C:\sg0117\dataset\plant_dataset\without_augmentation"   # 원본 데이터 있는 경로
+destination_dir = r"C:\sg0117\dataset\data2000"                        # train / test 분류될 폴더 경로
 
 # 클래스별 폴더 이름 설정
 categories = {
@@ -30,13 +30,13 @@ def split_and_copy_images():
     create_folder_structure(destination_dir)
 
     # 학습/검증 데이터 개수 설정
-    train_healthy_count = 500
-    train_diseased_count = 500
-    train_background_count = 200
+    train_healthy_count = 2000
+    train_diseased_count = 2000
+    train_background_count = 500
 
-    test_healthy_count = 100
+    test_healthy_count = 200
     test_diseased_count = 200
-    test_background_count = 50
+    test_background_count = 200
 
     healthy_images = []
     diseased_images = []
